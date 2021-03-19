@@ -9,19 +9,6 @@ https://user-images.githubusercontent.com/43847681/111757892-bac56200-8893-11eb-
 
 Our code provides specific tests for each of the following classes: **Card**, **Pack**, **Player**, **Deck** and **CardGame**. These classes are forming the source code for the following card game: there is a pack of 8 * number_of_players cards which is dealt towards the players in the way each of them will have 4 cards in their hand and 4 cards in the left deck; the game starts with first player drawing a card from the top of the left deck, keeping it in hand and discarding one card from hand to the bottom of the his right deck, which corresponds with next player's left deck; and so on until a player has in his hand 4 cards of the same denomination.
 
-#### Installing and Running the CardGame jar file
-
-1.Unarchive the CardGame.zip
-
-2.In the unarchived folder should be a folder named "output". In case you want to run CardGame.jar in other directory, create a folder named "output" to store output files in the same directory as CardGame.jar file.
-
-3.To run the CardGame jar file use the following command:
-java -jar CarGame.jar
-
-Important note:
-Make sure before running CardGame.jar to have the folder "output" created, otherwise the application will not find the folder where to store the files.
-
-
 #### Running the tests
 
 Tests are grouped in a test Suite, named **TestSuite**. They can be run in IDE.
