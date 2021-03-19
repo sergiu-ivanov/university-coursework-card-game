@@ -1,11 +1,13 @@
-# ECM2414 COURSEWORK
-
 version 1.0 18-11-2018.
-#### authors Sergiu Ivanov and Dana Buzatu
 
-Our code provides specific tests for each of the following classes: **Card**, **Pack**, **Player**, **Deck** and **CardGame** in order to reduce bugs and improve the quality of software. These classes are forming the source code for the following card game: there is a pack of 8*number_of_players cards which is dealt towards the players in the way each of them will have 4 cards in their hand and 4 cards in the left deck; the game starts with first player drawing a card from the top of the left deck, keeping it in hand and discarding one card from hand to the bottom of the his right deck, which corresponds with next player's left deck; and so on until a player has in his hand 4 cards of the same denomination.
+#### About
 
+The application represents a multi-threaded card playing simulation. The game has n players, each numbered 1 to n (which for clarity are named player1, player2, ... , playern, see the illustration in the link below ), with n being a positive integer, and n decks of cards, again, each numbered 1 to n (which for clarity are named deck1, deck2, ... , deckn, see the illustration in the link below ). Each player will hold a hand of 4 cards. Both these hands and the decks will be drawn from a pack which contains 8n cards. Each card has a face value (denomination) of a non-negative integer1.
+The decks and players will form a ring topology (see illustration in the link below for the case where n = 4). At the start of the game, each player will be distributed four cards in a round-robin fashion, from the top of the pack, starting by giving one card to player1, then one card to player2, etc. After the hands have been distributed, the decks will then be filled from the remaining cards in the pack, again in a round-robin fashion.
 
+https://user-images.githubusercontent.com/43847681/111757892-bac56200-8893-11eb-8b75-09ff33e68a81.png
+
+Our code provides specific tests for each of the following classes: **Card**, **Pack**, **Player**, **Deck** and **CardGame**. These classes are forming the source code for the following card game: there is a pack of 8 * number_of_players cards which is dealt towards the players in the way each of them will have 4 cards in their hand and 4 cards in the left deck; the game starts with first player drawing a card from the top of the left deck, keeping it in hand and discarding one card from hand to the bottom of the his right deck, which corresponds with next player's left deck; and so on until a player has in his hand 4 cards of the same denomination.
 
 #### Installing and Running the CardGame jar file
 
@@ -17,8 +19,7 @@ Our code provides specific tests for each of the following classes: **Card**, **
 java -jar CarGame.jar
 
 Important note:
-Make sure before to run CardGame.jar to have the folder "output" created, otherwise the application will not find the folder where to store the files.
-
+Make sure before running CardGame.jar to have the folder "output" created, otherwise the application will not find the folder where to store the files.
 
 
 #### Running the tests
@@ -305,15 +306,6 @@ Compile and Run java org.junit.runner.JUnitCore TestSuite with your class path
   CardGame.writeDeckOutput(decks, pack);
   ```
 
-#### Built
-
-The IDE used for this project was Eclipse and for Junit testing, Junit 4.x framework was used.
-
-We didn’t have as final purpose a high code coverage percentage, but to have a functionally correct code. Code coverage helped us understand problem areas
-(as those arising because of „edge cases”), so we can focus on them while
-writing new tests. We measure our code coverage using EclEmma, a free Java code
-coverage tool. We checked the code coverage for each test class and overall we
-received a percentage of about 90%.
 
 #### Authors
 
