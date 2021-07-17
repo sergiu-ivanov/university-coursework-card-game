@@ -1,3 +1,5 @@
+# A multithreaded card game simulation.
+
 version 1.0 18-11-2018.
 
 #### About
